@@ -1,0 +1,11 @@
+steps
+    sudo add-apt-repository -y ppa:git-core/ppa
+    sudo apt-get update
+    sudo apt-get install git -y
+Error: 
+  git : Depends: libpcre2-8-0 but it is not installable
+  E: Unable to correct problems, you have held broken packages.
+Solution: 
+    sudo vim /etc/apt/sources.list    -----  add " deb http://cz.archive.ubuntu.com/ubuntu xenial main universe" to the end
+    sudo apt-get update
+    sudo apt-get install git -y
