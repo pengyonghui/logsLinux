@@ -10,4 +10,17 @@ after installing, configuration is needed for commit messages to be sent out.
    git clone https://github.com/username/**.git
 
 4.commit and push to github
- https://www.liquidweb.com/kb/committing-pushing-github-ubuntu-18-04/
+   https://www.liquidweb.com/kb/committing-pushing-github-ubuntu-18-04/
+steps:
+   1. vim newfile.txt
+   ## make a newfile.txt
+   2. git add newfile.txt
+   ## highlight the new created file
+   3. git comment -m '**' newfile.txt
+   ## commenting the txt file(pushing it to the local repo)
+   4. git push -u origin master
+   ## pushing the txt file to the github account
+   
+   ps: git status
+   to check the new script/file's status
+   
