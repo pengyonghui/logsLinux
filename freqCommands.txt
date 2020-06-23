@@ -1,0 +1,39 @@
+(1) add repository in sources.list
+For example, installing the R package from using CRAN Mirrors
+First, Creat a new file: sudo gedit /etc/apt/sources.list.d/r-project.list And then copy and paste"deb https://cloud.r-project.org/bin/linux/ubuntu xenial/" into this file. At last, do: sudo apt-get update and install R system use: sudo apt-get install r-base
+
+(2) Installing R packages without root access
+
+In my machine, use the directory ~/R/x86_64-pc-linux-gnu-library/3.4/ to store the downloaded packages. To install a package we sue the command:
+> install.packages("soiltexture", lib="~/R/x86_64-pc-linux-gnu-library/3.4/")
+> library(soiltexture, lib.loc="~/R/x86_64-pc-linux-gnu-library/3.4/")
+
+(3) solve Error when running 'sudo apt-get install package'
+E: The package python-samba needs to be reinstalled, but I can't find an archive for it.
+
+1. add the following lines
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates universe
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+
+2. change this line
+deb http://us.archive.ubuntu.com/ubuntu/ xenial  multiverse universe restricted main
+to the following line
+deb http://us.archive.ubuntu.com/ubuntu/ xenial  restricted main
+
+3. Restart the Internet
+
+(4) Running Dropbox in my server
+
+run ~/.dropbox-dist/dropboxd
+
+(5) Execute all sudo commands without password for user pyh
+$ sudo visudo
+Append the following entry to run ALL command without a password for a user named pyh:
+pyh ALL=(ALL) NOPASSWD:ALL
+
+(6) install anaconda
+  1. sudo bash ./Downloads/Anaconda3-2020.02-Linux-x86_64.sh
+  2. source ~/.bashrc.
+  3. from ~/anacondas/bin run ./anaconda-navigator 
+
