@@ -1,0 +1,13 @@
+after installing, configuration is needed for commit messages to be sent out.
+
+1. configuring Git per User(also could be found in .gitconfig file)
+   git config --global user.name "**"
+   git config --global user.email "**@**.com"
+
+2. create a directory (a space used to sync codes to your Github account)
+
+3. clone a repository 
+   git clone https://github.com/username/**.git
+
+4.commit and push to github
+ https://www.liquidweb.com/kb/committing-pushing-github-ubuntu-18-04/
